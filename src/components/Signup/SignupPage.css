@@ -1,0 +1,158 @@
+.main-signup-page {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.main-signup-form {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.main-form {
+  width: 80%;
+}
+
+.image {
+  width: 55%;
+}
+.signupImage {
+  width: 80%;
+}
+
+.profile {
+  margin: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+}
+.profile label {
+  cursor: pointer;
+}
+
+.profile-picture {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.signup {
+  font-size: 3.7rem;
+}
+.signup-form {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 17px;
+  margin: 13px 0;
+  width: 100%;
+}
+
+.input-field {
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgb(173, 172, 172);
+  background-color: rgb(250, 235, 216);
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field img {
+  position: absolute;
+  cursor: pointer;
+  top: 30%;
+  right: 2%;
+}
+
+.error-msg {
+  color: red;
+}
+
+.btns {
+  margin-top: 27px;
+}
+
+.submitButton,
+.resetButton {
+  padding: 13px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.submitButton {
+  margin-right: 15px;
+  background-color: rgb(0, 127, 250);
+}
+
+.submitButton:hover {
+  background-color: rgb(1, 93, 185);
+}
+
+.resetButton {
+  background-color: rgb(219, 52, 71);
+}
+.resetButton:hover {
+  background-color: rgb(216, 5, 30);
+}
+
+.login-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.login-text span {
+  color: rgb(93, 93, 250);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.login-text span:hover {
+  color: rgb(52, 52, 241);
+}
+
+@media (max-width: 876px) {
+  .image {
+    display: none;
+  }
+  .main-signup-form {
+    width: 100%;
+  }
+  .main-form {
+    width: 100%;
+  }
+  .signup {
+    text-align: center;
+  }
+  .btns {
+    text-align: center;
+  }
+  .submitButton,
+  .resetButton {
+    padding: 7px;
+  }
+  .login-text {
+    text-align: center;
+  }
+}
