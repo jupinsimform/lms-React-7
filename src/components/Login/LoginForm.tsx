@@ -1,5 +1,6 @@
 import { useState, useCallback, memo } from "react";
 import { useNavigate } from "react-router-dom";
+import CryptoJS from "crypto-js";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../redux/feature/userSlice";
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
@@ -18,6 +19,15 @@ const validationSchema = Yup.object().shape({
     .required("Password is required")
     .min(8, "Password must be at least 8 characters long"),
 });
+
+// password Decryption function
+export function decryption(password: string): string {
+  const decrypted = CryptoJS.AES.decrypt(
+    password,
+    import.meta.env.VITE_SECRET_KEY
+  ).toString(CryptoJS.enc.Utf8);
+  return decrypted;
+}
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -61,7 +71,8 @@ function LoginForm() {
         // User exists, check password validity
         const user = users.filter(
           (user: Usertype) =>
-            user.email === values.email && user.password === values.password
+            user.email === values.email &&
+            decryption(user.password) === values.password
         );
         if (user.length !== 0) {
           // Password is correct, dispatch login action, navigate to home, and reset form
