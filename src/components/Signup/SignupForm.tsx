@@ -201,7 +201,7 @@ function SignupForm() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="name" className="label">
+                <label htmlFor="name" className="input-label">
                   Name
                 </label>
                 <Field
@@ -218,7 +218,7 @@ function SignupForm() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="email" className="label">
+                <label htmlFor="email" className="input-label">
                   Email
                 </label>
                 <Field
@@ -235,7 +235,7 @@ function SignupForm() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="phoneNumber" className="label">
+                <label htmlFor="phoneNumber" className="input-label">
                   PhoneNo
                 </label>
                 <Field
@@ -252,7 +252,7 @@ function SignupForm() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="password" className="label">
+                <label htmlFor="password" className="input-label">
                   Password
                 </label>
                 <div className="password-field">
@@ -277,7 +277,7 @@ function SignupForm() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="confirmPassword" className="label">
+                <label htmlFor="confirmPassword" className="input-label">
                   Confirm Password
                 </label>
                 <Field
