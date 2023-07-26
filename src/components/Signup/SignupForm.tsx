@@ -21,7 +21,7 @@ import Hide from "../../assets/hidepassword.svg";
 function checkFilesType(files: File): boolean {
   let valid = true;
   if (files) {
-    if (!["image/jpg", "image/png"].includes(files.type)) {
+    if (!["image/png", "image/jpeg"].includes(files.type)) {
       valid = false;
     }
   }
